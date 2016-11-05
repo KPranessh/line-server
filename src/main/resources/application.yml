@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: line-server
+
+logging:
+  file: ../logs/${spring.application.name}.log
+
+line-server:
+  file-path: ./input/http_plugin_5.log
+  cache-name: fileDataFindCache 
+  read-timeout-ms: 1000
+  file-chunk-size: 30
+  byte-buffer-size: 8192

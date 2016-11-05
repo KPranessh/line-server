@@ -1,0 +1,18 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd"
+	updateCheck="false"
+	monitoring="autodetect"
+	dynamicConfig="true">
+
+	<diskStore path="user.dir/cache" />
+
+	<cache name="fileDataFindCache"
+		maxEntriesLocalHeap="100000"
+		maxEntriesLocalDisk="100000"
+		eternal="true"
+		diskSpoolBufferSizeMB="20"		
+		memoryStoreEvictionPolicy="LFU"
+		transactionalMode="off">
+		<persistence strategy="none" />
+	</cache>
+</ehcache>
